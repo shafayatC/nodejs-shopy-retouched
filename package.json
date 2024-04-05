@@ -1,0 +1,25 @@
+{
+  "name": "my-node-app",
+  "version": "1.0.0",
+  "main": "web/index.js",
+  "license": "UNLICENSED",
+  "scripts": {
+    "shopify": "shopify",
+    "build": "shopify app build",
+    "dev": "shopify app dev",
+    "info": "shopify app info",
+    "generate": "shopify app generate",
+    "deploy": "shopify app deploy",
+    "dev2": "nodemon web/index.js",
+    "ngrok": "http-server 3000 --verify-webhook=shopify --verify-webhook-secret=47dd8cd56fadb065acdf539b143b2015"
+  },
+  "dependencies": {
+    "@shopify/app": "^3.0.0",
+    "@shopify/cli": "^3.0.0",
+    "@shopify/shopify-api": "^9.6.2",
+    "shopify-api-node": "^3.13.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
+  }
+}

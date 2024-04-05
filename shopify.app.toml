@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "0508e551c586df1eb409e5d486586a03"
+name = "my-node-test-app"
+handle = "my-node-test-app-4"
+application_url = "https://single-negotiations-powerful-douglas.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "testmyreact.myshopify.com"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = ""
+
+[auth]
+redirect_urls = [
+  "https://single-negotiations-powerful-douglas.trycloudflare.com/auth/callback",
+  "https://single-negotiations-powerful-douglas.trycloudflare.com/auth/shopify/callback",
+  "https://single-negotiations-powerful-douglas.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false
