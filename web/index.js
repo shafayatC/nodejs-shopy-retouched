@@ -9,14 +9,15 @@ import shopify from "./shopify.js";
 import productCreator from "./product-creator.js";
 import PrivacyWebhookHandlers from "./privacy.js";
 
+console.log("Starting app...");
 const PORT = parseInt(
   process.env.BACKEND_PORT || process.env.PORT || "3000",
   10
-);
+); 
 
 const STATIC_PATH =
   process.env.NODE_ENV === "production"
-    ? `${process.cwd()}/frontend/dist`
+    ? `${process.cwd()}/web/frontend/build`
     : `${process.cwd()}/frontend/`;
 // const STATIC_PATH =
 //   process.env.NODE_ENV === "production"

@@ -7,11 +7,13 @@
     "shopify": "shopify",
     "build": "shopify app build",
     "dev": "shopify app dev",
+    "dev3" :"npm run dev --tunnel-url https://randomly-generated-hostname.trycloudflare.com:3000",
     "info": "shopify app info",
     "generate": "shopify app generate",
     "deploy": "shopify app deploy",
-    "dev2": "nodemon web/index.js",
-    "ngrok": "http-server 3000 --verify-webhook=shopify --verify-webhook-secret=47dd8cd56fadb065acdf539b143b2015"
+    "dev2": "nodemon",
+    "prod": "NODE_ENV=production nodemon",
+    "ngrok": "ngrok 3000 --verify-webhook=shopify --verify-webhook-secret=47dd8cd56fadb065acdf539b143b2015"
   },
   "dependencies": {
     "@shopify/app": "^3.0.0",

@@ -3,7 +3,7 @@
 client_id = "0508e551c586df1eb409e5d486586a03"
 name = "my-node-test-app"
 handle = "my-node-test-app-4"
-application_url = "https://single-negotiations-powerful-douglas.trycloudflare.com"
+application_url = "https://officer-cu-occupations-as.trycloudflare.com"
 embedded = true
 
 [build]
@@ -12,13 +12,13 @@ dev_store_url = "testmyreact.myshopify.com"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
-scopes = ""
+scopes = "read_all_orders,read_app_settings,read_assigned_fulfillment_orders,read_content,read_customers,read_inventory,read_orders,read_products,read_script_tags,read_shopify_payments_payouts,read_themes,unauthenticated_read_checkouts,unauthenticated_read_product_listings,write_all_orders,write_app_settings,write_assigned_fulfillment_orders,write_content,write_customers,write_inventory,write_orders,write_products,write_shipping,write_shopify_payments_disputes,write_themes"
 
 [auth]
 redirect_urls = [
-  "https://single-negotiations-powerful-douglas.trycloudflare.com/auth/callback",
-  "https://single-negotiations-powerful-douglas.trycloudflare.com/auth/shopify/callback",
-  "https://single-negotiations-powerful-douglas.trycloudflare.com/api/auth/callback"
+  "https://officer-cu-occupations-as.trycloudflare.com/auth/callback",
+  "https://officer-cu-occupations-as.trycloudflare.com/auth/shopify/callback",
+  "https://officer-cu-occupations-as.trycloudflare.com/api/auth/callback"
 ]
 
 [webhooks]

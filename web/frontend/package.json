@@ -5,6 +5,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "build": "vite build",
+    "build2": "set \"SHOPIFY_API_KEY=0508e551c586df1eb409e5d486586a03\" && vite build",
     "dev": "vite",
     "coverage": "vitest run --coverage"
   },

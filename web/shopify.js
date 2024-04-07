@@ -1,7 +1,6 @@
-import { BillingInterval, LATEST_API_VERSION } from "@shopify/shopify-api";
 import { shopifyApp } from "@shopify/shopify-app-express";
 import { SQLiteSessionStorage } from "@shopify/shopify-app-session-storage-sqlite";
-import { restResources } from "@shopify/shopify-api/rest/admin/2023-04";
+import { ShopifyError, BillingInterval } from "@shopify/shopify-api";
 
 const DB_PATH = `${process.cwd()}/database.sqlite`;
 
@@ -16,10 +15,19 @@ const billingConfig = {
   },
 };
 
+// Initialize Shopify API context with required parameters
+const apiKey = process.env.SHOPIFY_API_KEY;
+const apiSecretKey = process.env.SHOPIFY_API_SECRET_KEY;
+const scopes = ['read_products','write_products']; // Replace with your actual scopes
+
+if (!apiKey || !apiSecretKey) {
+  throw new Error("Shopify API credentials not provided.");
+}
+
 const shopify = shopifyApp({
   api: {
-    apiVersion: LATEST_API_VERSION,
-    restResources,
+    apiKey,
+    apiSecretKey,
     billing: undefined, // or replace with billingConfig above to enable example billing
   },
   auth: {
